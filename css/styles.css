@@ -8,7 +8,7 @@ html, body {
 }
 
 /* 全体のリセット */
-body, h1, p {
+body, p {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
@@ -95,6 +95,14 @@ main a:active {
   color: olivedrab; /* セージグリーン */
 }
 
+/* トップページの名前用スタイル */
+.my-name {
+  font-size: 3em;         /* フォントサイズを大きく設定 */
+  font-weight: bold;      /* 太字 */
+  margin: 20px 0;         /* 上下の余白 */
+  color: #333;            /* テキストカラー */
+}
+
 /* 更新履歴についてのスタイル */
 /* タイムライン全体のスタイル */
 .timeline {
@@ -121,4 +129,111 @@ main a:active {
 .timeline .text {
   flex: 1;                /* 残りのスペースを占有 */
   color: #666;            /* テキストカラー */
+}
+
+/* CVについてのスタイル */
+/* 学歴全体のスタイル */
+.education-timeline, .visiting-education-timeline {
+  list-style: none; /* デフォルトの箇条書き記号を非表示 */
+  padding: 0;       /* 内側の余白を削除 */
+  margin: 0;        /* 外側の余白を削除 */
+}
+
+/* リストアイテム（各項目）のスタイル */
+.education-timeline li, .visiting-education-timeline li {
+  display: flex;          /* 横並びに配置 */
+  align-items: flex-start; /* 上部で揃える */
+  margin-bottom: 10px;    /* 項目間の余白 */
+}
+
+/* 日付部分のスタイル */
+.education-timeline .date, .visiting-education-timeline .date {
+  flex: 0 0 180px;        /* 固定幅を設定（必要に応じて調整） */
+  font-weight: bold;      /* 日付を太字に */
+  color: #333;            /* テキストカラー */
+}
+
+/* 学位や職位と機関をまとめる詳細部分 */
+.education-timeline .details, .visiting-education-timeline .details {
+  flex: 1;                /* 残りのスペースを占有 */
+  display: flex;          /* 横並びに配置 */
+  flex-direction: column; /* 縦並びにする */
+}
+
+/* 学位や職位部分のスタイル */
+.education-timeline .degree, .visiting-education-timeline .position {
+  font-weight: bold;      /* 太字に */
+  margin-bottom: 3px;     /* 学位/職位と機関の間に余白を追加 */
+}
+
+/* 機関名部分のスタイル */
+.education-timeline .institution, .visiting-education-timeline .institution {
+  color: #666;            /* テキストカラー */
+  margin-left: 0;         /* 左側の余白をなくす */
+}
+
+/* RA、TAのスタイル */
+/* 共通スタイル: タイムライン全体 */
+.research-assistant-timeline,
+.teaching-assistant-timeline {
+  list-style: none; /* 箇条書き記号を非表示 */
+  padding: 0;       /* 内側の余白を削除 */
+  margin: 0;        /* 外側の余白を削除 */
+}
+
+/* タイムライン各項目のスタイル */
+.research-assistant-timeline li,
+.teaching-assistant-timeline li {
+  display: flex;          /* 横並びに配置 */
+  align-items: flex-start; /* 上部で揃える */
+  margin-bottom: 10px;    /* 項目間の余白 */
+}
+
+/* 日付部分のスタイル */
+.research-assistant-timeline .date,
+.teaching-assistant-timeline .date {
+  flex: 0 0 180px;        /* 固定幅を設定（必要に応じて調整） */
+  font-weight: bold;      /* 太字に */
+  color: #333;            /* テキストカラー */
+}
+
+/* 詳細部分のラッパー */
+.research-assistant-timeline .details,
+.teaching-assistant-timeline .details {
+  flex: 1;                /* 残りのスペースを占有 */
+  display: flex;          /* 横並びに配置 */
+  flex-direction: column; /* 縦並びにする */
+}
+
+/* Supervisor部分のスタイル */
+.research-assistant-timeline .supervisor,
+.teaching-assistant-timeline .supervisor {
+  font-style: italic;     /* イタリック体 */
+  margin-bottom: 3px;     /* 下に余白を追加 */
+}
+
+/* Institution部分のスタイル */
+.research-assistant-timeline .institution,
+.teaching-assistant-timeline .institution {
+  color: #666;            /* 薄いグレーのテキスト */
+  margin-bottom: 5px;     /* 下に余白を追加 */
+}
+
+/* コース名のスタイル (Teaching Assistant用) */
+.teaching-assistant-timeline .course {
+  font-weight: bold;      /* 太字 */
+  margin-bottom: 3px;     /* 下に余白 */
+}
+
+/* 使用言語のスタイル (Teaching Assistant用) */
+.teaching-assistant-timeline .language {
+  color: #666;            /* テキストをさらに薄いグレーに */
+  font-size: 0.9em;       /* 少し小さめのフォントサイズ */
+}
+
+/* 日本語部分（講義名）のスタイル */
+.course-japanese {
+  color: #999;            /* グレー色に設定 */
+  font-size: 0.9em;       /* 少し小さいフォントサイズ */
+  margin-left: 5px;       /* 左側に少し余白を追加 */
 }
