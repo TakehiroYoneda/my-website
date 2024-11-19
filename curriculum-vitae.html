@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Takehiro's Research</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    // Load header
+    function loadHeader() {
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading header:', error));
+    }
+
+    // Load footer
+    function loadFooter() {
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+    }
+
+    // Read header and footer when loading the page
+    document.addEventListener('DOMContentLoaded', () => {
+      loadHeader();
+      loadFooter();
+    });
+  </script>
+</head>
+<body>
+  <header id="header">
+    <!-- Header is loaded here -->
+  </header>
+
+  <main>
+    <h2>Curriculum Vitae</h2>
+    <p>Download my CV from <a href="pdf/CV.pdf" target="_blank" rel="noopener noreferrer">here</a>.</p>
+  </main>
+
+  <footer id="footer">
+    <!-- Footer is loaded here -->
+  </footer>
+</body>
+</html>

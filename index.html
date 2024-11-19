@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yoneda Takehiro</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    // Load header
+    function loadHeader() {
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading header:', error));
+    }
+
+    // Load footer
+    function loadFooter() {
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+    }
+
+    // Read header and footer when loading the page
+    document.addEventListener('DOMContentLoaded', () => {
+      loadHeader();
+      loadFooter();
+    });
+  </script>
+</head>
+<body>
+  <header id="header">
+    <!-- Header is loaded here -->
+  </header>
+
+  <main>
+    <h1>Takehiro Yoneda</h1>
+    <p>I am a Ph.D. student in Economics at the Graduate School of Economics, The University of Tokyo. </p>
+    <p>My primary research field is International Trade, especially economic agreements among countries.</p>
+    <p>I got a master's degreee in the Graduate School of Economics, the University of Tokyo.</p>
+    <h2>Research Interests</h2>
+    <ul>
+      <li>
+        International Economics (Trade theory and FDI theory)
+      </li>
+    </ul>
+    <h2>Contact Information</h2>
+    <ul>
+        <li>Graduate School of Economics, The University of Tokyo</li>
+        <li>International Academic Research Building. 7F (Room 714), <br>
+            The University of Tokyo, 7-3-1, Hongo, Bunkyo-ku, Tokyo, 113-8654, Japan
+        </li>
+        <li><b>Email:</b> yoneda-takehiro513[at]g.ecc.u-tokyo.ac.jp</li>
+    </ul>
+    <h2>Past Presentations</h2>
+    <ul>
+        <li><a href="https://www.rieb.kobe-u.ac.jp/iefs/event/2022/230325.html">IEFS Japan Annual Meeting 2022 (March 25, 2023)</a></li>
+        <li><a href="https://www.cirje.e.u-tokyo.ac.jp/research/workshops/micro/micro2022.html">Microeconomic Workshop in the University of Tokyo (January 17, 2023)</a></li>
+    </ul>
+  </main>
+
+  <footer id="footer">
+    <!-- Footer is loaded here -->
+  </footer>
+</body>
+</html>
