@@ -94,4 +94,31 @@ main a:hover {
 main a:active {
   color: olivedrab; /* セージグリーン */
 }
-  
+
+/* 更新履歴についてのスタイル */
+/* タイムライン全体のスタイル */
+.timeline {
+  list-style: none; /* デフォルトの箇条書き記号を非表示 */
+  padding: 0;       /* 内側の余白を削除 */
+  margin: 0;        /* 外側の余白を削除 */
+}
+
+/* リストアイテム（各項目）のスタイル */
+.timeline li {
+  display: flex;          /* 横並びに配置 */
+  align-items: flex-start; /* 上部で揃える */
+  margin-bottom: 10px;    /* 項目間の余白 */
+}
+
+/* 日付部分のスタイル */
+.timeline .date {
+  flex: 0 0 180px;        /* 固定幅を設定（必要に応じて調整） */
+  font-weight: bold;      /* 日付を太字に */
+  color: #333;            /* テキストカラー */
+}
+
+/* 本文部分のスタイル */
+.timeline .text {
+  flex: 1;                /* 残りのスペースを占有 */
+  color: #666;            /* テキストカラー */
+}
